@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan';font-size: 22px;
+}
+
+
+/* root  variable codes  */
+:root{
+    --primary-color: #E3E6F3;
+    --text--color-1:#088178;
+}
+
+
+/* Resuable code */
+h1{    
+ color: #222;
+ font-size: 50px;
+ line-height: 64px;
+}
+h2{    
+    color: #222;
+    font-size: 46px;
+    line-height: 44px;
+}
+h4{    
+    color: #222;
+    font-size: 20px;
+    line-height: 22px;
+}
+h6{    
+    font-weight: 700;
+    font-size:12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15x 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+a.normal{
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 30px;
+    color: #000;
+    background-color:#fff ;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+a.white{
+    font-weight: 600;
+    font-size: 13px;
+    padding: 11px 18px;
+    color: #ffffff;
+    background-color:transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    border: 1px solid #fff;
+}
+/* ----------------------- */
+
+
+
+
+
+
+/* -----------------------Header start------------------------------ */
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: var(--primary-color);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+    align-items: center;
+    /* border-bottom: 1px solid #80808030; f*/
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.nav--lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav--lists li{
+    padding: 0 20px;
+    position: relative;
+}
+.nav--lists li a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a; 
+    transition: .3s ease;
+}
+.nav--lists li a:hover,
+.nav--lists li a.active{
+   color: var(--text--color-1);
+}
+.nav--lists li a.active::after,
+.nav--lists li a:hover::after{
+    content: "";
+    width: 55%;
+    height: 2px;
+    background: var(--text--color-1);
+    position: absolute;
+    left: 20px;
+    bottom: -4px;
+}
+
+
+
+/*----------------------- Home page--------------------------- */
+
+.hero-banner{
+    background-image: url("/picAssests/hero4.png");
+    background-position: top 25% right 0%;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+.hero-banner strong{
+    padding-bottom:20px;
+}
+.hero-banner h1{
+    color: var(--text--color-1);
+}
+.hero-banner a{
+    display: block;
+    color: var(--text--color-1);
+    background-image: url("/picAssests/button.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: var(--text--color-1);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/*----------------------- feature section------------------ */
+#feature--section .feature--box {
+    width: 180px;
+    text-align: center;
+    padding: 15px 25px;
+    box-shadow: 5px 20px 34px rgba(0,0,0,0.3);
+    border: 1px solid #cce7d0;
+    margin: 15px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#feature--section .feature--box:hover{
+    box-shadow: 10px 10px 34px rgba(78,62,221,0.1);
+}
+#feature--section .feature--box h6{
+    padding:9px 8px 6px;
+    line-height: 1;
+    color: var(--text--color-1);
+    border-radius: 4px;
+    background-color: #fdddef;
+}
+#feature--section .feature--box img{
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+#feature--section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature--section .feature--box:nth-child(2) h6 {
+    background-color: #edebbc;
+}
+#feature--section .feature--box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+#feature--section .feature--box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+#feature--section .feature--box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+#feature--section .feature--box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+
+/* porduct---section */
+#product1 {
+    text-align: center;
+}
+#product1 h2{
+    margin-bottom: 12px;
+}
+#product1 .prod {
+    width: 25%;
+    max-width: 325px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: .3s ease;
+    transition: 0.3 ease;
+    position: relative;
+}
+#product1 .prod:hover{
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.6);
+}
+#product1 .prod img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+#product1 .prod .des{
+    text-align: start;
+    padding: 10px 0px;
+   
+}
+#product1 .prod .des h5{
+   padding-top:7px ;
+   color: #1a1a1a;
+   font-size: 14px;
+}
+#product1 .prod .des .fa-star{
+  color:#ffb700 ;
+  font-size: 12px;
+}
+#product1 .prod .des h4{
+ padding-top: 7px;
+ font-size: 15px;
+ font-weight: 700;
+ color: #088178;
+}
+#product1 .prod .des a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    border-radius: 50px;
+    background-color: #e8f6ea73;
+    font-weight: 500;
+    color: var(--text--color-1);
+    text-align: center;
+    border: 1px solid   #cce7d0;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.fa-cart-shopping:before, .fa-shopping-cart:before {
+    content: "\f07a";
+    font-size: 18px;
+}
+#product1 .prod span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .Prod-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+/* offer banner */
+#offer--banner{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/picAssests/banner--images/b2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh ;
+
+}
+#offer--banner h4{
+  font-size: 16px;
+  color: #fff;
+}
+#offer--banner h2{
+  font-size: 30px;
+  color: #fff;
+  padding: 10px 0;
+}
+#offer--banner h2 span{
+  color: #ef3636;
+ 
+}
+#offer--banner a:hover{
+    background-color: var(--text--color-1);
+    color: #fff;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+}
+#sm-banner .banner-box{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("/picAssests/banner--images/b17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 650px;
+    height: 50vh ;
+    padding: 30px;
+}
+#sm-banner .banner-box2{
+ background-image: url("/picAssests/banner--images/b10.jpg");
+    
+}
+#sm-banner h4{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+}
+#sm-banner h2{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 800;
+}
+#sm-banner span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover .white{
+    background-color: var(--text--color-1);
+    border: 1px solid var(--text--color-1);
+}
+#banner-3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+#banner-3 .banner-box{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("/picAssests/banner--images/b7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 30%;
+    height: 30vh ;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner-3 .banner-box2{
+    background-image: url("/picAssests/banner--images/b4.jpg");
+}
+#banner-3 .banner-box3{
+    background-image: url("/picAssests/banner--images/b18.jpg");
+}
+#banner-3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner-3 h2{
+    color: #ec554e;
+    font-weight: 800;
+    font-size: 15px;
+}
+/* shop page  */
+/* prodcut page */
